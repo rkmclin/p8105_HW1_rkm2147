@@ -81,4 +81,13 @@ Write a short description of the penguins dataset (not the penguins_raw dataset)
 - the size of the dataset (using nrow and ncol)
 - the mean flipper length
 
+The data penguins includes a total of 8 variables of importance.  Including `r penguins `  
+
+
+Make a scatter plot! Using bill length and flipper length as variables. 
+
+```{r}
+ggplot(data = penguins) + 
+  geom_point(mapping = aes(x = bill_length_mm, y = flipper_length_mm, color = species))
+```
 
