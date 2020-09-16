@@ -36,17 +36,21 @@ prob1_df =
 
 
 Try to take the mean of each variable:
-```{r}
-
+```{r mean_pull_var}
+mean(pull(prob1_df, samp))
+mean(pull(prob1_df, samp_gt_0))
+mean(pull(prob1_df, char_vec))
+mean(pull(prob1_df, factor_vec))
 ```
 
 What worked and what didn't work?
 
+
 Variable Worked   |   Variable did not work
-_________________ |__________________________
-                  |
-                  |
-                  
+------------------|------------------------
+   samp           |   char_vec
+ samp_gt_0        |   factor_vec
+                   
                   
 ## Problem 2
 
@@ -57,3 +61,5 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
