@@ -50,8 +50,23 @@ Variable Worked   |   Variable did not work
 ------------------|------------------------
    samp           |   char_vec
  samp_gt_0        |   factor_vec
+
+
+Next step: 
+- convert the logical vector to numeric, and multiply the random sample by the result
+- convert the logical vector to a factor, and multiply the random sample by the result
+- convert the logical vector to a factor and then convert the result to numeric, and multiply the random sample by the result
                    
-                  
+```{r try_numeric}
+as.numeric(pull(prob1_df, samp))
+as.numeric(pull(prob1_df, samp_gt_0))
+as.numeric(pull(prob1_df, char_vec))
+as.numeric(pull(prob1_df, factor_vec))
+```
+```{r}
+as.numeric(pull(prob1_df, samp_gt_0)) * pull(prob1_df, samp)
+```
+              
 ## Problem 2
 
 You can also embed plots, for example:
