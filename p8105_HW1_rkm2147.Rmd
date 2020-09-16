@@ -69,8 +69,16 @@ as.numeric(pull(prob1_df, samp_gt_0)) * pull(prob1_df, samp)
               
 ## Problem 2
 
-```{r}
+We are now using the penguin data set
 
+```{r}
+data("penguins", package = "palmerpenguins")
 ```
+
+Write a short description of the penguins dataset (not the penguins_raw dataset) using inline R code, including:
+
+- the data in this dataset, including names / values of important variables
+- the size of the dataset (using nrow and ncol)
+- the mean flipper length
 
 
