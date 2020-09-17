@@ -71,20 +71,25 @@ as.numeric(pull(prob1_df, samp_gt_0)) * pull(prob1_df, samp)
 
 We are now using the penguin data set
 
-```{r}
+```{r penguin data}
 data("penguins", package = "palmerpenguins")
 ```
 
 
-The data `r data(penguins) ` includes a total of 8 variables of importance: `r variable.names(penguins) `. 
+The data set includes a total of 8 variables of importance: `r variable.names(penguins) `.
 
-The data ` (penguins) ` size is `r nrow(penguins) ` rows by `r ncol(penguins) ` columns.  
+When considering the summary report, we notice that Chinstrap penguins have the smallest amount of penguin numbers, and that the island of Torgersen has the smallest amount of penguins. Efforts could be concentrated in these two areas.  
+```{r summary}
+summary(penguins)
+```
 
-The mean flipper length for the penguin data set is `r mean (penguins) `  
+The penguin data set size is `r nrow(penguins) ` rows by `r ncol(penguins) ` columns.  
+
+The mean flipper length for the penguin data set is `r`  
 
 Make a scatter plot! Using bill length and flipper length as variables. 
 
-```{r}
+```{r scatterplot}
 ggplot(data = penguins) + 
   geom_point(mapping = aes(x = bill_length_mm, y = flipper_length_mm, color = species))
 ```
