@@ -66,7 +66,10 @@ as.numeric(pull(prob1_df, factor_vec))
 ```
 ```{r}
 as.numeric(pull(prob1_df, samp_gt_0)) * pull(prob1_df, samp)
+as.numeric(pull(prob1_df, char_vec)) * pull(prob1_df, samp)
+as.numeric(pull(prob1_df, factor_vec)) * pull(prob1_df, samp)
 ```
+
               
 ## Problem 2
 
@@ -79,7 +82,7 @@ data("penguins", package = "palmerpenguins")
 
 The data set includes a total of 8 variables of importance: `r variable.names(penguins) `.
 
-When considering the summary report, we notice that Chinstrap penguins have the smallest amount of penguin numbers, and that the island of Torgersen has the smallest amount of penguins. Efforts could be concentrated in these two areas.  
+When considering the summary report, we notice that Chinstrap penguins have the smallest amount of penguin numbers, and that the island of Torgersen has the smallest amount of penguins. Efforts could be concentrated in these two areas in terms of preservation.  
 ```{r summary}
 summary(penguins)
 ```
