@@ -82,7 +82,7 @@ data("penguins", package = "palmerpenguins")
 
 The data set includes a total of 8 variables of importance: `r variable.names(penguins) `.
 
-When considering the summary report, we notice that Chinstrap penguins have the smallest amount of penguin numbers, and that the island of Torgersen has the smallest amount of penguins. Efforts could be concentrated in these two areas in terms of preservation.  
+When considering the summary report, we notice that Chinstrap penguins have the smallest amount of penguin numbers, and that the island of Torgersen has the smallest amount of penguins. Efforts could be concentrated in these two areas in terms of preservation.  We also notice that the median and mean values of weight differ, although we don't know if this difference is significant without running further analysis. 
 ```{r summary}
 summary(penguins)
 ```
@@ -98,7 +98,7 @@ ggplot(data = penguins) +
   geom_point(mapping = aes(x = bill_length_mm, y = flipper_length_mm, color = species))
 ```
 
-Finally, we will be saving the scatterplot via ggsave and exporting
+Finally, we will be saving the scatterplot via ggsave and export to the repository 
 
 ```{r}
 ggsave("penguins.png")
