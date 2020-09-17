@@ -85,7 +85,7 @@ summary(penguins)
 
 The penguin data set size is `r nrow(penguins) ` rows by `r ncol(penguins) ` columns.  
 
-The mean flipper length for the penguin data set is `r`  
+The mean flipper length for the penguin data set is `r mean(penguins$flipper_length_mm)`  
 
 Make a scatter plot! Using bill length and flipper length as variables. 
 
