@@ -75,14 +75,12 @@ We are now using the penguin data set
 data("penguins", package = "palmerpenguins")
 ```
 
-Write a short description of the penguins dataset (not the penguins_raw dataset) using inline R code, including:
 
-- the data in this dataset, including names / values of important variables
-- the size of the dataset (using nrow and ncol)
-- the mean flipper length
+The data `r data(penguins) ` includes a total of 8 variables of importance: `r variable.names(penguins) `. 
 
-The data penguins includes a total of 8 variables of importance.  Including `r penguins `  
+The data ` (penguins) ` size is `r nrow(penguins) ` rows by `r ncol(penguins) ` columns.  
 
+The mean flipper length for the penguin data set is `r mean (penguins) `  
 
 Make a scatter plot! Using bill length and flipper length as variables. 
 
