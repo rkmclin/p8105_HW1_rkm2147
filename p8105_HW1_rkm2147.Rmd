@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 Be sure to load tidyverse into library in order to use tibble tool
-```{r}
+```{r load tidyverse}
 library(tidyverse)
 ```
 
@@ -29,8 +29,8 @@ prob1_df =
     tibble(
       samp = rnorm(10),
       samp_gt_0 = samp > 0,
-      char_vec = c("a", "b", "c", "d", "e", "f", "g", "h", "i", "j"),
-      factor_vec = factor(c("low", "low", "low", "mod", "mod", "mod", "mod","high", "high", "high"))
+      char_vec = c("apple", "bread", "candy", "dairy", "eggs", "fries", "grapes", "honey", "ice", "jello"),
+      factor_vec = factor(c("weak", "weak", "weak", "int", "int", "int", "int","strong", "strong", "strong"))
     )
 ```
 
@@ -53,6 +53,7 @@ Variable Worked   |   Variable did not work
 
 
 Next step: 
+
 - convert the logical vector to numeric, and multiply the random sample by the result
 - convert the logical vector to a factor, and multiply the random sample by the result
 - convert the logical vector to a factor and then convert the result to numeric, and multiply the random sample by the result
@@ -87,10 +88,17 @@ The penguin data set size is `r nrow(penguins) ` rows by `r ncol(penguins) ` col
 
 The mean flipper length for the penguin data set is `r mean(penguins$flipper_length_mm, na.rm = TRUE)`      
 
-Make a scatter plot! Using bill length and flipper length as variables. 
+Next, we will make a scatter plot! Using bill length and flipper length as x & y variables. 
 
 ```{r scatterplot}
 ggplot(data = penguins) + 
   geom_point(mapping = aes(x = bill_length_mm, y = flipper_length_mm, color = species))
 ```
+
+Finally, we will be saving the scatterplot via ggsave and exporting
+
+```{r}
+ggsave("penguins.png")
+```
+
 
